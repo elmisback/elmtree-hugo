@@ -13,6 +13,7 @@ html {
     overflow-y: scroll;
 }
 
+/* Black links. */
 a {
   color: $color;
 }
@@ -26,7 +27,6 @@ body {
 
   /* NOTE This should be a function of the typical paragraph length.*/
   max-width: 700px;
-  width: 100%;
 
   margin: 40px auto;
   padding: 0 8%;
