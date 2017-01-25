@@ -5,10 +5,12 @@
   <title>{{.Title}} | {{ .Site.Title }}</title>
   <link rel="stylesheet" href="/css/stylesheet.css">
   <link rel="stylesheet" href="/css/syntax.css">
+  {{ if (isset .Params "mathjax") }}
   <script type="text/x-mathjax-config">
     MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
   </script>
-  <script async src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+  <script async src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML'></script>
+  {{ end }}
 </head>
 
 <body>
