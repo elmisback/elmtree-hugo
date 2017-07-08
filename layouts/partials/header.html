@@ -4,7 +4,6 @@
   <!-- TODO fix double title on index -->
   <title>{{.Title}} | {{ .Site.Title }}</title>
   <link rel="stylesheet" href="/css/stylesheet.css">
-  <link rel="stylesheet" href="/css/syntax.css">
   {{ if (isset .Params "mathjax") }}
   <script type="text/x-mathjax-config">
     MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
@@ -14,11 +13,6 @@
 </head>
 
 <body>
-<header>
-  <div>
-    <a href="{{ .Site.BaseURL }}" id="site-title">{{ .Site.Title }}</a>
-  </div>
-
   <nav>
   {{ range (index .Site.Sections "fixed") }}
   <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
@@ -26,5 +20,13 @@
   <!-- TODO link to a list of posts -->
   <a href="#">Posts</a>
   </nav>
+<!--
+<header>
+  <div>
+    <a href="{{ .Site.BaseURL }}" id="site-title">{{ .Site.Title }}</a>
+  </div>
+
   <br>
 </header>
+-->
+<main>
